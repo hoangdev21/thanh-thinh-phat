@@ -1,0 +1,83 @@
+:root {
+  /* Colors - from logo */
+  --color-primary: #1B2A4A;
+  --color-primary-dark: #0F1A2E;
+  --color-primary-light: #2A3F6A;
+  --color-secondary: #C41E3A;
+  --color-secondary-dark: #A01830;
+  --color-secondary-light: #E8364F;
+  --color-bg: #F5F6F8;
+  --color-bg-alt: #EDF0F4;
+  --color-white: #FFFFFF;
+  --color-text: #2D3748;
+  --color-text-light: #718096;
+  --color-text-muted: #A0AEC0;
+  --color-border: #E2E8F0;
+  --color-border-dark: #CBD5E0;
+  --color-success: #38A169;
+  --color-error: #E53E3E;
+  --color-warning: #D69E2E;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+
+  /* Typography */
+  --font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(27, 42, 74, 0.06);
+  --shadow-md: 0 4px 6px rgba(27, 42, 74, 0.08);
+  --shadow-lg: 0 10px 25px rgba(27, 42, 74, 0.1);
+  --shadow-xl: 0 20px 40px rgba(27, 42, 74, 0.15);
+  --shadow-card: 0 2px 8px rgba(27, 42, 74, 0.08);
+  --shadow-card-hover: 0 12px 30px rgba(27, 42, 74, 0.16);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* Layout */
+  --container-max: 1200px;
+  --header-height: 70px;
+
+  /* Z-index */
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+}

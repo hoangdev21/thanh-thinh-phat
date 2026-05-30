@@ -1,0 +1,148 @@
+.footer {
+  background: var(--color-primary);
+  color: #fff;
+  padding-top: 64px;
+}
+
+.footerInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.footerCol h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.footerCol p,
+.footerCol a {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.footerCol a:hover {
+  color: #fff;
+}
+
+.footerLinks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+}
+
+.footerLinks a {
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.contactItem svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.footerBottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 48px;
+  padding: 20px 24px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 991px) {
+  .footerInner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (max-width: 575px) {
+  .footer {
+    padding-top: 40px;
+  }
+
+  .footerInner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 16px;
+    padding: 0 16px;
+  }
+
+  .footerCol:nth-child(1) {
+    grid-column: span 2;
+    text-align: center;
+  }
+
+  .footerCol:nth-child(1) p {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .footerCol:nth-child(2) {
+    grid-column: span 1;
+    padding-left: 12px;
+  }
+
+  .footerCol:nth-child(3) {
+    grid-column: span 1;
+    padding-left: 12px;
+  }
+
+  .footerCol:nth-child(4) {
+    grid-column: span 2;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 20px;
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footerCol:nth-child(4) h3 {
+    text-align: center;
+    width: 100%;
+  }
+
+  .contactItem {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .footerCol h3 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  .footerCol p,
+  .footerCol a,
+  .contactItem {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .footerBottom {
+    margin-top: 32px;
+    padding: 16px;
+    font-size: 0.8rem;
+  }
+}

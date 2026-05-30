@@ -1,0 +1,145 @@
+.zaloContainer {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  z-index: var(--z-fixed);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  pointer-events: none; /* Let clicks pass through the container outer padding */
+}
+
+.zaloWrapper {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  pointer-events: auto; /* Re-enable pointer events for the button itself */
+}
+
+.zaloBtn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #0084ff; /* Lighter, vibrant Zalo blue */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0, 132, 255, 0.35);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 5;
+  text-decoration: none;
+  animation: zaloVibrate 3s infinite ease-in-out;
+}
+
+.zaloBtn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 30px rgba(0, 132, 255, 0.5);
+  background-color: #0074e8;
+}
+
+/* Pulsing background ripple waves */
+.pulseRing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(0, 132, 255, 0.25);
+  animation: pulseWave 2s infinite cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.pulseRing2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(0, 132, 255, 0.12);
+  animation: pulseWave 2s infinite cubic-bezier(0.4, 0, 0.2, 1) 0.6s;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Vibrating keyframes: shakes rapidly at the end of each 3-second cycle */
+@keyframes zaloVibrate {
+  0%, 88%, 100% {
+    transform: rotate(0) scale(1);
+  }
+  89% {
+    transform: rotate(-12deg) scale(1.06);
+  }
+  90% {
+    transform: rotate(12deg) scale(1.06);
+  }
+  91% {
+    transform: rotate(-12deg) scale(1.06);
+  }
+  92% {
+    transform: rotate(12deg) scale(1.06);
+  }
+  93% {
+    transform: rotate(-12deg) scale(1.06);
+  }
+  94% {
+    transform: rotate(12deg) scale(1.06);
+  }
+  95% {
+    transform: rotate(-6deg) scale(1.03);
+  }
+  96% {
+    transform: rotate(6deg) scale(1.03);
+  }
+  97% {
+    transform: rotate(-3deg) scale(1.01);
+  }
+  98% {
+    transform: rotate(3deg) scale(1.01);
+  }
+  99% {
+    transform: rotate(0) scale(1);
+  }
+}
+
+/* Expanding ripple waves keyframes */
+@keyframes pulseWave {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .zaloContainer {
+    right: 16px;
+    bottom: 16px;
+  }
+}
+
+.zaloIconImg {
+  width: 44px; /* Larger image for laptop */
+  height: 44px;
+  object-fit: contain;
+  z-index: 6;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (max-width: 768px) {
+  .zaloIconImg {
+    width: 36px; /* slightly smaller on mobile devices for better scale */
+    height: 36px;
+  }
+}

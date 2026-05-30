@@ -1,0 +1,249 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 300;
+  background: var(--color-white);
+  height: 70px;
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 4px 20px rgba(27, 42, 74, 0.05);
+  transition: all 0.3s ease;
+}
+
+.headerInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logoImg {
+  height: 56px;
+  width: auto;
+  object-fit: contain;
+  transition: height 0.3s ease;
+}
+
+.logoIcon {
+  width: 40px;
+  height: 40px;
+  background: var(--color-secondary);
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.logoText {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  letter-spacing: -0.2px;
+  transition: font-size 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.navLink {
+  color: var(--color-text-light);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.25s ease, border-color 0.25s ease;
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+}
+
+.navLink:hover,
+.navLinkActive {
+  color: var(--color-secondary);
+  border-bottom-color: var(--color-secondary);
+}
+
+/* Contact Info blocks (Inline, Clean & Aligned) */
+.headerInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.infoBlock {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: var(--color-primary);
+  cursor: default;
+  transition: color 0.25s ease;
+}
+
+a.infoBlock {
+  cursor: pointer;
+}
+
+.infoIcon {
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.infoVal {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.2;
+  transition: color 0.25s ease;
+  white-space: nowrap;
+}
+
+.infoDivider {
+  width: 1px;
+  height: 14px;
+  background-color: var(--color-border-dark);
+  opacity: 0.7;
+}
+
+/* Hover Animations */
+a.infoBlock:hover {
+  color: var(--color-secondary);
+}
+
+a.infoBlock:hover .infoIcon {
+  color: var(--color-secondary);
+  animation: softBounce 0.6s ease-in-out infinite;
+}
+
+a.infoBlock:hover .infoVal {
+  color: var(--color-secondary);
+}
+
+@keyframes softBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  cursor: pointer;
+  padding: 4px;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+.mobileContactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 4px;
+}
+
+.mobileContactItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+  padding: 6px 0;
+}
+
+.mobileMenuOpen {
+  display: flex;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--color-white);
+  flex-direction: column;
+  padding: 32px 24px;
+  gap: 20px;
+  z-index: 500;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  overflow-y: auto;
+}
+
+.mobileMenuOpen .navLink {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+
+
+.mobileMenuOpen .navLinkActive {
+  color: var(--color-secondary);
+  border-bottom-color: var(--color-secondary);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .headerInner {
+    padding: 0 16px;
+  }
+
+  .logoText {
+    font-size: 1.05rem; /* Thu nhỏ chữ Thành Thịnh Phát trên mobile */
+  }
+
+  .logoImg {
+    height: 48px; /* Tăng kích thước logo trên mobile */
+  }
+
+  .logoIcon {
+    width: 32px; /* Thu nhỏ logo icon fallback trên mobile */
+    height: 32px;
+    font-size: 0.85rem;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .headerInfo {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobileMenu {
+    display: none;
+  }
+
+  .mobileMenuOpen {
+    display: flex;
+  }
+}
